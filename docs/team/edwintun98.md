@@ -1,117 +1,72 @@
-# EdwinTun98's Project Portfolio Page
+# EdwinTun98's Project PortFolio Page
 
 ## Project: MoneyTrail v1.0 - v2.1
+MoneyTrail is a CLI-based, Java budget tracking app designed to help users manage expenses, enforce spending limits, and build better financial habits. It provides a lightweight yet powerful tool for users who prefer command-line interaction to monitor and control their finances.
 
-MoneyTrail is a lightweight, user-friendly budget tracking application designed to help users monitor expenses, enforce spending limits, and develop better financial habits. Built in Java, it is optimized for CLI users.
+## Key Contributions
 
-Given below are my contributions to the project:
+### Feature Development
+- **Search & Edit:**
+  - **Find Entries:**  
+    Developed a keyword-based search to allow users to quickly locate expense or income entries by searching through descriptions, categories, and dates. This improves usability by reducing the time users spend finding specific entries and makes data access more efficient. ([PR #38](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/38))
+  - **Edit Expenses:**  
+    Enhanced the editing functionality with robust validations that prevent negative or zero values. This work ensures data integrity and reliability, preventing accidental entry errors while allowing users to update their records smoothly. ([PR #67](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/67))
 
-- **Code Contributed**:  
-  [RepoSense Link](https://nus-cs2113-ay2425s2.github.io/tp-dashboard/?search=&sort=groupTitle&sortWithin=title&timeframe=commit&mergegroup=&groupSelect=groupByRepos&breakdown=true&checkedFileTypes=docs~functional-code~test-code~other&since=2025-02-21&tabOpen=true&tabType=authorship&tabAuthor=EdwinTun98&tabRepo=AY2425S2-CS2113-W12-4%2Ftp%5Bmaster%5D&authorshipIsMergeGroup=false&authorshipFileTypes=docs~functional-code~test-code&authorshipIsBinaryFileTypeChecked=false&authorshipIsIgnoredFilesChecked=false)
+- **Display Functions:**
+  - **List Expenses:**  
+    Built a comprehensive display function that shows all expenses in a clear format, offering users an at-a-glance overview of their spending.
+  - **List Budgets:**  
+    Created functionality to list both overall and category-specific budgets, enabling users to easily monitor their financial limits and manage their allocations effectively. ([PR #78](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/78))
 
----
+- **Budget Management:**
+  - **Set Category Budget Limit:**  
+    Implemented a feature with advanced validations to set category-specific budget limits. The system ensures that each individual limit does not exceed the total budget, thereby enforcing financial discipline and preventing overspending errors. ([PR #86](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/86))
+  - **Check Expenses Against Budget:**  
+    Designed a mechanism for comparing expenses against set budgets to alert users when spending is nearing or exceeding allocated limits. This proactive approach helps users maintain control over their finances. ([PR #168](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/168))
 
-- **Implemented Features**:
+- **Data Persistence:**
+  - **Budget Storage Integration:**  
+    Integrated persistent storage for budget data, ensuring that all budget entries are saved and reliably reloaded across sessions. This enhancement reinforces user trust by guaranteeing that their financial data is secure and consistently available. ([PR #168](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/168))
 
-- **Find Entries**
-    - *What it does*: What it does: Enables users to search for expense or income entries by a keyword (searches in description, category, and date, case-insensitive).
+### Enhancements & Refactoring
+- **Modularity & Helper Methods:**
+  - Refactored complex logic into smaller, manageable helper functions such as `parseAndValidateAmount()`, `checkIfExceedsOverallBudget()`, and others. This not only improves code readability and maintainability but also makes the system easier to test and extend in the future. ([PR #170](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/170))
 
-- **Edit Expenses**
-    - *What it does*: What it does: Allows users to perform partial or full updates on existing entries with validation to prevent negative or zero values. Alerts users if an invalid index or formatting is encountered.
+- **Error Handling & Input Validation:**
+  - Standardized input validations using regular expressions and comprehensive error messages across features. This uniform approach minimizes bugs and provides clear user feedback, ensuring that only valid and correctly formatted data is processed.
 
-- **List Expenses**
-    - *What it does*: Displays all expenses, providing a clear snapshot of the expenses.
+- **Streamlined Storage Logic:**
+  - Enhanced the logic responsible for data storage to provide a more reliable and consistent process when loading and saving budget data. This work prevents issues such as missing overall budget information and improves long-term data stability.
 
-- **List Budgets**
-    - *What it does*: Displays all category-specific and overall budgets, providing a clear snapshot of the allocated amounts.
-       
-- **Set Category Budget Limit**
-    - *What it does*: Allows users to assign a budget limit to individual categories. Validates format and prevents limits that exceed the total budget. It validates input using a helper `parseAndValidateAmount()` (ensuring up to 7 whole digits and 2 decimal places) and prevents individual limits from exceeding the overall budget.
+- **Incremental Improvements via Pull Requests:**
+  - Utilized a series of focused pull requests to incrementally improve the codebase. This structured approach not only facilitated rigorous code reviews but also ensured that each enhancement built upon a stable foundation:
+    - [PR #38](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/38)
+    - [PR #67](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/67)
+    - [PR #78](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/78)
+    - [PR #86](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/86)
+    - [PR #168](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/168)
+    - [PR #170](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/170)
 
-- **Check Expenses Against Budget**
-    - *What it does*: Allows users to check either their overall or category-specific expenses against the corresponding budget.
+### Testing & Documentation
+- **JUnit Testing:**
+  - Developed comprehensive test cases covering functionalities like setting total budgets, category limits, expense additions, and validations. These tests cover edge cases such as budget overflow, invalid input formats, and ensure consistent behavior across various user scenarios.
 
-- **Budget Storage Integration**
-    - *What it does*: Ensures budget entries persist across sessions and are reliably retrieved.
----
+- **Documentation:**
+  - Updated both the developer and user guides to include detailed diagrams, module workflows, and usage instructions. Enhanced documentation provides clarity on system architecture and helps new developers or users quickly understand the application's functionality.
 
-## Enhancements & Refactoring
+## Team Contribution
 
-- **Find Entries**:
-  - *Enhancement*: Refined search functionality and introduced the `findEntry()` feature. [PR #38](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/38)
+- **Collaborative User Experience:**  
+  The team worked closely to enhance user interactions, developing features like quick searches, robust editing, clear expense displays, and proactive budget tracking. This collaboration has resulted in an intuitive and effective financial management tool.
 
-- **Edit Expenses**:
-  - *Enhancement*: Improved modularity and reliability of update logic. [PR #67](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/67)
+- **Collective Code Quality & Maintainability:**  
+  By jointly implementing modular refactoring and shared helper methods, the team significantly improved the readability and maintainability of the codebase. This collective approach has streamlined future development and simplified testing processes.
 
-- **List Budgets**:
-  - *Enhancement*: Added support for category budgets and introduced the `Budget` class to better manage these details. [PR #78](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/78)
+- **Unified Data Integrity Efforts:**  
+  Through shared efforts in establishing rigorous validations and error handling, the team ensured that financial data remains accurate and secure. This coordinated focus prevents data corruption and guarantees reliable application performance.
 
-- **Set Category Budget Limit**:
-  - *Enhancement*: Enhanced validations and bug fixes in budget checking. [PR #86](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/86)
+- **Proactive Financial Management Design:**  
+  The team collaboratively designed features that proactively alert users about budget limits and spending oversights. This group initiative empowers users to maintain financial discipline and better manage their resources.
 
-- **Set Total Budget**:
-  - *Enhancement*: Improved validation logic to handle edge cases effectively. [PR #86](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/86)
-
-- **Check Expenses Against Budget**
-  - *Enhancement*: Adjusted logic to better handle edge cases and ensure user warnings in problematic scenarios. [PR #168](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/168)
-
-- **Refactored Complex Methods into Readable Components Enhancements**  
-  Refactored long and hard-to-test methods (`addExpense()`, `editExpense()`, `setCategoryLimit()`) into smaller, modular helpers to improve clarity, testability, and maintainability.
-
-- **Set Category Budget Limit and Set Total Budget**
-  - Added validation using parseAndValidateAmount() to enforce correct budget input (up to 7 whole digits and 2 decimal places).
-
-  - Introduced logic to prevent setting a category budget that exceeds the total overall budget.
-
-  - Added check for presence of overall budget before allowing category budget to be set.
-
-  - Enhanced modularity and defensive coding practices in handling invalid formats and overflow. [PR #170](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/170)
-
-- **Expense Addition Enhancements**
-  - *Enhancement*: Overall refactoring for improved modularity and error handling. [PR #170](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/170)
-
-- **Budget Storage Integration**
-    - *Enhancement*: Fixes issues with file persistence so that budget entries, including the overall budget, are consistently loaded from `budgets.txt`.Improved consistency in data storage and retrieval. [PR #168](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/168)
-
-- **Extracted and Reused Helper Methods**  
-  Created reusable utility methods to prevent code duplication and simplify error handling:
-    - `parseAndValidateAmount()` – validates numerical input format and limits.
-    - `checkIfExceedsOverallBudget()` – alerts users if a new expense exceeds total budget.
-    - `checkIfExceedsCategoryBudget()` – provides a similar alert for category-specific limits.
-    - `getTotalCategoryBudgets()` – aggregates all category budgets (excluding overall).
-    - `matchesKeyword()` – simplifies keyword matching for the `findEntry()` command.
-
-- **Improved Input Validation & Error Messaging**
-    - Ensured all amount-related inputs conformed to a strict format using regex.
-    - Standardized exception handling using meaningful messages and centralized logger calls.
-    - Supported defensive programming to guard against `null`, blank inputs, and malformed formats.
-
-- **Improved Robustness in Budget Handling**
-    - Introduced budget overflow detection before saving new values.
-    - Prevented incorrect persistence of invalid budget values using early exception exits.
-    - Ensured total and category budgets are always respected during expense addition.
-
-- **Streamlined Storage Logic**
-    - Ensured budget data load consistently on program restart.
-    - Fixed issues related to missing "Overall" budget during file reads by introducing conditional checks and cleaner parsing in `Budget.parseString()`.
-
----
-
-## Testing Contributions (JUnit)
-
-- Developed comprehensive test cases for core functionalities including `SetTotalBudget`, `SetCategoryLimit`, `CheckExpenses`, `AddExpense`, `ListBudgets`, `Find`, and `EditExpense`.
-- *Edge Cases Covered*: Budget overflow/underflow, invalid input characters, and inconsistencies in command formatting.
-- *Enhancement*: Updated test cases to reflect the latest changes and bug fixes. [PR #168](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/168)
-
----
-
-## Documentation
-
-- **Developer Guide**:
-    - Updated diagrams and detailed explanations for modules such as `AddExpense`, `SetCategoryLimit`, `CheckExpenses`, `Find`, and `EditExpense`.
-    - Elaborated on the helper methods and their logic flows.
-
-- **User Guide**:
-    - Ensured feature changes are clearly documented to improve user understanding.
----
-
+- **Comprehensive Testing & Documentation:**  
+  The development and maintenance of detailed JUnit tests and thorough documentation were team-oriented tasks. This collaborative process has ensured a robust, well-documented, and future-proof application that is easier for new contributors to understand and extend.
