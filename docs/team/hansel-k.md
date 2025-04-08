@@ -29,28 +29,21 @@ Given below are my contributions to the project.
   - Implemented a mechanism to extract unique categories while maintaining their order of appearance within the money list.
 - **Credits:** Custom implementation utilizing Java's `LinkedHashSet` for maintaining uniqueness and order.
 
-#### New Feature: Clear All Expense Entries
-- **What it does:** Provides users with the ability to clear all entries from the money list in one command.
-- **Justification:** Adds a convenient way for users to reset their financial data when starting anew or correcting errors.
-
-#### New Feature: Display Total Expenses [PR #41](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/41)
-- **What it does:** Calculates and displays the total sum of expenses recorded by the user.
-- **Justification:** Provides users with an essential overview of their spending habits, enabling better financial tracking and decision-making.
-- **Credits:** Custom implementation using standard Java libraries.
-
-#### New Feature: Set Total Budget [PR #41](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/41)
-What it does: Enables users to set a total budget for their financial tracking. The budget is validated and formatted to ensure accuracy.
-Justification: Provides a critical functionality to allow users to monitor and limit their expenses within a predefined budget.
-- **Credits:** Utilized Java's `DecimalFormat` for budget formatting and managed persistent storage integration.
-
----
+#### Other New Features: 
+- Clear All Expense Entries
+  - **What it does:** Provides users with the ability to clear all entries from the money list in one command.
+  - **Justification:** Adds a convenient way for users to reset their financial data when starting anew or correcting errors.
+- Set Total Budget [PR #41](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/41)
+  - **What it does:** Calculates and displays the total sum of expenses recorded by the user.
+  - **Justification:** Provides a critical functionality to allow users to monitor and limit their expenses within a predefined budget.
+- Display Total Expenses [PR #41](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/41)
+  - **What it does:** Enables users to set a total budget for their financial tracking. The budget is validated and formatted to ensure accuracy.
+  - **Justification:** Provides users with an essential overview of their spending habits, enabling better financial tracking and decision-making.
 
 ### Enhancements to Existing Features
 - Shortened some command inputs (e.g., from `addExpense` to `addExp`) for optimization. [PR #64](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/64) [PR #66](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/66)
 - Performed and added JUnit tests on `addExpense` and other methods [PR #53](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/53) [PR #59](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/59) [PR #164](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/164)
 - Applied the SLAP concept on the `addExpense` and `listCats` methods. [PR #88](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/88)
-
----
 
 ### Issues and Bug Fixes
 - Manually tested for bugs before Practical Examination dry run and rectified them or raised the issue to team members. [PR #56](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/56) [PR #66](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/66) [PR #92](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/92)
@@ -69,12 +62,9 @@ Justification: Provides a critical functionality to allow users to monitor and l
 
 ---
 
-### Project Management
+### Project Management and Team-Based Contributions
 - Assigned and coordinated feature development.
+- Shared insights and suggestions with team members to enhance the project (e.g. shortening user inputs for better UX).
 - Reviewed numerous issues from Practical Exam dry run and delegated them to team members best suited to resolve them.
 
----
-
-### Team-Based Contributions
-- Shared insights and suggestions with team members to enhance the project (e.g. shortening user inputs for better UX).
 
