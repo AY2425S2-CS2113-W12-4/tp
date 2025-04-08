@@ -1,79 +1,42 @@
-# EdwinTun98's Project Portfolio Page
+# EdwinTun98's Project PortFolio Page
 
 ## Project: MoneyTrail v1.0 - v2.1
+MoneyTrail is a Java-based CLI budget tracker that helps users manage expenses, enforce spending limits, and build better financial habits.
 
-Project: MoneyTrail v1.0 - v2.1
-MoneyTrail is a lightweight, user-friendly budget tracking
-application designed to help users monitor expenses, enforce spending limits,
-and develop better financial habits. It is built in Java and optimized for CLI users.
+## Key Contributions
 
+### Feature Development
+- **Find Entries:**  
+  Developed a keyword search for quick access to expense/income entries via descriptions, categories, and dates ([PR #38](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/38)).
+- **Edit Expenses:**  
+  Enhanced editing with validations to prevent negative or zero values, ensuring data integrity ([PR #67](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/67)).
+- **List Displays:**  
+  Created clear displays for all expenses and both overall and category-specific budgets ([PR #78](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/78)).
+- **Budget Management:**  
+  Implemented features to set, validate, and compare category and total budgets against expenses ([PR #86](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/86); [PR #168](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/168)).
+- **Data Persistence:**  
+  Integrated reliable budget storage to maintain data across sessions ([PR #168](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/168)).
 
-Given below are my contributions to the project:
+### Enhancements & Refactoring
+- **Modularity:**  
+  Refactored complex methods into helper functions (e.g., `parseAndValidateAmount()`, `checkIfExceedsOverallBudget()`) for better readability and testability ([PR #170](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/170)).
+- **Validation & Error Handling:**  
+  Standardized input validations with regex and improved error messaging.
+- **Storage Reliability:**  
+  Streamlined saving/loading logic to prevent data issues like missing overall budgets.
+- **Incremental Improvements:**  
+  Several targeted PRs ([PR #38](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/38), [PR #67](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/67), [PR #78](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/78), [PR #86](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/86), [PR #168](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/168), [PR #170](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/170)) supported these enhancements.
 
-- **Code contributed**: [RepoSense Link](https://nus-cs2113-ay2425s2.github.io/tp-dashboard/?search=&sort=groupTitle&sortWithin=title&timeframe=commit&mergegroup=&groupSelect=groupByRepos&breakdown=true&checkedFileTypes=docs~functional-code~test-code~other&since=2025-02-21&tabOpen=true&tabType=authorship&tabAuthor=EdwinTun98&tabRepo=AY2425S2-CS2113-W12-4%2Ftp%5Bmaster%5D&authorshipIsMergeGroup=false&authorshipFileTypes=docs~functional-code~test-code&authorshipIsBinaryFileTypeChecked=false&authorshipIsIgnoredFilesChecked=false)
+### Testing & Documentation
+- **JUnit Testing:**  
+  Developed comprehensive tests for expense management, budget settings, and edge cases.
+- **Documentation:**  
+  Updated developer and user guides with diagrams, workflows, and usage instructions.
 
+## Team Contribution
 
-## Implementations
-
-- **New feature**: `Find`
-    - What it does: Enables users to search for entries by keywords.
-    - Justification: Improves navigation through the list of expenses, especially when it's long.
-
-- **New feature**: `List`
-    - What it does: Displays all saved expense entries in a readable format.
-
-- **New feature**: `EditExpenses`
-    - What it does: Allows editing of any existing entry's description, amount, category, and date.
-    - Justification: Fixes user mistakes or updates entry values without deletion.
-
-- **New feature**: `ListBudget`
-    - What it does: Lists all budgets set for categories and the overall budget.
-
-- **New feature**: `SetCategoryBudgetLimit`
-    - What it does: Allows setting individual budgets per category.
-
-- **New feature**: `CheckExpenses`
-    - What it does: Compares spending against set budgets and alerts if limits are exceeded.
-
-- **Storage enhancement**: Added persistent storage support for **budget entries** on load.
-
----
-
-## Enhancements
-
-- Refactored methods for:
-    - `EditExpenses`
-    - `CheckExpenses`
-    - `SetCategoryBudgetLimit`
-- Applied SLAP (Single Level of Abstraction Principle) to parser logic for better maintainability.
-- **JUnit Tests**:
-    - Wrote unit tests for:
-        - `SetTotalBudget`
-        - `SetCategoryBudgetLimit`
-        - `CheckExpenses`
-        - `ListBudgets`
-    - Ensured proper coverage for edge cases such as invalid/empty input and negative values.
-
----
-
-## Documentation
-
-- **Developer Guide**:
-    - Added sequence and class diagrams for:
-        - `ListCategory`
-        - `SetCategoryLimit`
-        - `EditExpense`
-        - `Find`
-    - Wrote detailed descriptions for each of the features implemented, including command format, validation logic, and storage behavior.
-
----
-
-## Team-based Tasks & Collaboration
-
-- Participated in review and refinement of common utility classes (`TextUI`, `Parser`)
-- Worked closely with teammates to ensure consistent CLI command formats
-- Reviewed PRs and suggested improvements to maintain coding standards across the codebase
-
-
-  
-    
+- **User Experience:** Enhanced search, editing, displays, and timely budget alerts.
+- **Code Quality:** Modular refactoring and shared helpers improved readability and testing.
+- **Data Integrity:** Unified validations and error handling protect data accuracy.
+- **Proactive Design:** Team-driven alerts and spending checks empower effective financial management.
+- **Testing & Documentation:** Thorough tests and clear guides ensure a robust application.

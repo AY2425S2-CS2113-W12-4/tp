@@ -4,7 +4,7 @@
 
 Managing your finances has never been easier. MoneyTrail is a 
 lightweight, user-friendly budget tracking application designed to 
-help you keep track of your expenses, monitor your spending habits, 
+help you keep track of your expenses/income, monitor your spending habits, 
 and achieve your financial goals.
 
 ## Quick Start
@@ -12,7 +12,7 @@ and achieve your financial goals.
 Here are the steps to get started quickly:
 
 1. Ensure that you have Java 17 or above installed.
-2. Download the latest version of `MoneyTrail` from [here](https://github.com/AY2425S2-CS2113-W12-4/tp/releases/download/v2.0c/tp.jar).
+2. Download the latest version of `MoneyTrail` from [here](https://github.com/AY2425S2-CS2113-W12-4/tp/releases/download/v2.1/tp.jar).
 3. Copy the file to the folder you want to use as the *home folder* for your application.
 4. Open a command terminal, `cd`, into the folder you put the jar file in, and use the `java -jar tp.jar` command to run the application.
 
@@ -106,7 +106,7 @@ List of available commands:
 11. find <keyword>: Finds an entry based on the keyword.
 12. edit <index> <description> [$/<amount>] [c/<category>] [d/<date>]: 
     Modify the full entry or just selected details.
-13. check Overall / check Category: 
+13. check Overall / check <category>: 
     Shows overall expense or total expense for searched category
     and show set budget and total expenditure of respective category.
 14. clear: Clears all entries.
@@ -136,12 +136,13 @@ What do you want to do next?
 
 Adds an expense entry to the list.
 
-Format: `addExp <description> $/<amount> c/<category> d/<date>`
+Format: `addExp DESCRIPTION $/<amount> c/CATEGORY d/DATE`
 
 #### Notes:
 - Category and date parameters are optional!
     * If no category is given, the expense will be tagged as "uncategorized".
-    * Similarly, if no date is given, the expense will be tagged as "no date". 
+    * Similarly, if no date is given, the expense will be tagged as "no date".
+    * If overall Budget is not set when adding expenses, will prompt user to set overall budget.
 - If both category and date are entered in the same input, category must come before date (`c/` before `/d`)
 
 Example 1: `addExp Honey $/20.25 c/Food d/30-03-25`
@@ -168,6 +169,26 @@ What do you want to do next?
 totalExp
 Total expenses: $660.00
 -------------------------------------------------------------------------------
+```
+
+### Adding income entries: `addIncome`
+
+Adds an income entry to the list.
+
+Format: `addIncome DESCRIPTION $/<amount> d/DATE`
+
+> ![NOTE]
+> DATE parameter is optional.
+
+Example: `addIncome salary $/2000`
+
+Outcome:
+```
+What do you want to do next?
+addIncome salary $/2000
+Income added: Income: salary $2000.00 [no date]
+-------------------------------------------------------------------------------
+What do you want to do next?
 ```
 
 ### Deleting a task: `del`
@@ -226,20 +247,20 @@ Exiting program... Thank you for using MoneyTrail! :)
 Modifies an existing entry's description, monetary value, 
 category, or date.
 
-Format: `edit <INDEX> <DESCRIPTION> [options]`
+Format: `edit INDEX DESCRIPTION [options]`
 
 Options:
 
-- `$/amount`: Updates the entry's monetary value.
+- `$/<amount>`: Updates the entry's monetary value.
 
-- `c/category`: Updates the entry's category.
+- `c/CATEGORY`: Updates the entry's category.
 
-- `d/date`: Updates the entry's date.
+- `d/DATE`: Updates the entry's date.
 
 > [!NOTE]
 > Useful information about the command format:
 > - Parameters need not be in a **specific order**.
-    e.g. if the command specifies `$/<amount> c/<category>`, `c/<category> $/<amount>` is acceptable.
+    e.g. if the command specifies `$/<amount> c/CATEGORY`, `c/CATEGORY $/<amount>` is acceptable.
 > - Options need not be updated all at once. Users can select which options they want to update and leave the rest. 
 > - However, INDEX must always come after `edit`, followed by DESCRIPTION.
     e.g. if the command specifies `edit INDEX DESCRIPTION`, `edit DESCRIPTION INDEX` is unacceptable.
@@ -259,7 +280,7 @@ What do you want to do next?
 
 Specifies a budget amount for a specific expense/income category.
 
-Format: `setCatBgt c/<category> <amount>`
+Format: `setCatBgt c/CATEGORY <amount>`
 
 Example: `setCatBgt c/Uncategorized 200`
 
@@ -316,7 +337,7 @@ Displays overall expense or expense for a specified category
 > [!NOTE]
 > Overall budget refers to total budget
 
-Format: `check <Overall or Category>`
+Format: `check Overall / check CATEGORY`
 
 Example 1: `check Food`
 
@@ -372,23 +393,23 @@ any command that changes the data. You can copy this file in a pen drive.
 
 ## 💰 MoneyTrail Command Summary
 
-| Command     | Format                                        | Example                                    | Description                                                |
-|-------------|-----------------------------------------------|--------------------------------------------|------------------------------------------------------------|
-| `help`      | `help`                                        | `help`                                     | Shows all available commands                               |
-| `list`      | `list`                                        | `list`                                     | Displays all expense entries                               |
+| Command     | Format                                          | Example                                    | Description                                                |
+|-------------|-------------------------------------------------|--------------------------------------------|------------------------------------------------------------|
+| `help`      | `help`                                          | `help`                                     | Shows all available commands                               |
+| `list`      | `list`                                          | `list`                                     | Displays all expense entries                               |
 | `addExp`    | `addExp <desc> $/<amount> [c/<cat>] [d/<date>]` | `addExp Lunch $/12.50 c/Food d/2023-10-15` | Add new expense (category/date optional)                   |
-| `addIncome` | `addIncome <desc> $/<amount> [d/date]`        | `addIncome Salary $/2500.00 d/2023-10-15`  | Adds a new income entry (date optional)                    |
-| `del`       | `del <index>`                                 | `del 3`                                    | Removes entry #3 from list                                 |
-| `find`      | `find <keyword>`                              | `find coffee`                              | Searches entries by keyword                                |
-| `edit`      | `edit <index> [options]`                      | `edit 1 $/15 d/2024-05-08`                 | Modifies full entry or selected details                    | 
-| `totalExp`  | `totalExp`                                    | `totalExp`                                 | Shows sum of all expenses                                  |
-| `setTotBgt` | `setTotBgt <amount>`                          | `setTotBgt 500.00`                         | Sets total spending budget                                 |
-| `setCatBgt` | `setCatBgt c/<category> <amount>`             | `setCatBgt c/Food 200.00`                  | Sets budget for a specific category                        |
-| `listBgt`   | `listBgt`                                     | `listBgt`                                  | Shows all category budgets                                 |
-| `listCat`   | `listCat`                                     | `listCat`                                  | Shows all used categories                                  |
-| `check`     | `check <Overall or Category>`                 | `check Food`                               | Shows overall expenses of expenses for a specific category |
-| `clear`     | `clear`                                       | `clear`                                    | Clears all entries                                         |
-| `exit`      | `exit`                                        | `exit`                                     | Closes the application                                     |
+| `addIncome` | `addIncome <desc> $/<amount> [d/date]`          | `addIncome Salary $/2500.00 d/2023-10-15`  | Adds a new income entry (date optional)                    |
+| `del`       | `del <index>`                                   | `del 3`                                    | Removes entry #3 from list                                 |
+| `find`      | `find <keyword>`                                | `find coffee`                              | Searches entries by keyword                                |
+| `edit`      | `edit <index> [options]`                        | `edit 1 $/15 d/2024-05-08`                 | Modifies full entry or selected details                    | 
+| `totalExp`  | `totalExp`                                      | `totalExp`                                 | Shows sum of all expenses                                  |
+| `setTotBgt` | `setTotBgt <amount>`                            | `setTotBgt 500.00`                         | Sets total spending budget                                 |
+| `setCatBgt` | `setCatBgt c/<category> <amount>`               | `setCatBgt c/Food 200.00`                  | Sets budget for a specific category                        |
+| `listBgt`   | `listBgt`                                       | `listBgt`                                  | Shows all category budgets                                 |
+| `listCat`   | `listCat`                                       | `listCat`                                  | Shows all used categories                                  |
+| `check`     | `check <Overall or Category>`                   | `check Food`                               | Shows overall expenses of expenses for a specific category |
+| `clear`     | `clear`                                         | `clear`                                    | Clears all entries                                         |
+| `exit`      | `exit`                                          | `exit`                                     | Closes the application                                     |
 
 #### 📝 Usage Notes
 ```bash
@@ -412,7 +433,6 @@ addExp Hotel $/200.00 c/Travel d/2023-12-15
 
 - Large datasets may slow down performance. If you have a significant number of entries, performance may degrade.
 
-#### 🔍 Tips
+#### 🔍 Reminder tips
 - View entry numbers first with `list` before using `del`
 - Amounts must be positive numbers (e.g. `$/15.50`)
-- Dates should use `YYYY-MM-DD` format
