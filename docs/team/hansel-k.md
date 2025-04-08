@@ -8,7 +8,6 @@ monitor your spending habits, and achieve your financial goals.
 It is written in Java and is designed specifically for CLI users.
 
 Given below are my contributions to the project.
-
 - **Code contributed**: [RepoSense Link](https://nus-cs2113-ay2425s2.github.io/tp-dashboard/?search=hansel-k&breakdown=true&sort=groupTitle%20dsc&sortWithin=title&since=2025-02-21&timeframe=commit&mergegroup=&groupSelect=groupByRepos&checkedFileTypes=test-code~other~functional-code~docs)
 
 ### Implementations:
@@ -23,8 +22,7 @@ Given below are my contributions to the project.
 #### New Feature: Display All Unique Expense Categories [PR #50](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/50)
 - **What it does:** Extracts and displays all unique categories from the expense entries recorded by the user.
 - **Justification:** Helps users organize and understand their spending habits by categorizing expenses effectively
-- **Highlights:**
-  - Implemented a mechanism to extract unique categories while maintaining their order of appearance within the money list.
+- **Highlights:** Implemented a mechanism to extract unique categories while maintaining their order of appearance within the money list.
 - **Credits:** Custom implementation utilizing Java's `LinkedHashSet` for maintaining uniqueness and order.
 
 #### Other New Features: 
@@ -37,12 +35,11 @@ Given below are my contributions to the project.
 - Performed and added JUnit tests on `addExpense` and other methods [PR #53](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/53) [PR #59](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/59) [PR #164](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/164)
 - Applied the SLAP concept on the `addExpense` and `listCats` methods. [PR #88](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/88)
 
-### Documentation
-#### User Guide:
+### User Guide:
 - Focused on adding and updating `addExp`, `totalExp` and `del` commands, and the Command Cheat Sheet. [PR #54](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/54) [PR #64](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/64) [PR #79](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/79) 
 - Majorly updated User Guide with new features for V2.0 [PR #92](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/92)
 
-#### Developer Guide:
+### Developer Guide:
 - Provided UML diagrams illustrating the workflow of the `help` and `exit` commands. [PR #79](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/79)
 - Filled in the User Stories, Non-Functional Requirements, Glossary, and Instructions for Manual Testing sections. [PR #79](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/79)
 
