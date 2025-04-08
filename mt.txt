@@ -1,0 +1,2 @@
+Expense: fuel $20.00 {transportation} [no date]
+Expense: dinner $300.00 {food} [2024]
