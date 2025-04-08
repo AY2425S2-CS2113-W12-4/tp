@@ -29,14 +29,8 @@ Given below are my contributions to the project.
 
 #### Other New Features: 
 - Clear All Expense Entries
-  - **What it does:** Provides users with the ability to clear all entries from the money list in one command.
-  - **Justification:** Adds a convenient way for users to reset their financial data when starting anew or correcting errors.
 - Set Total Budget [PR #41](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/41)
-  - **What it does:** Calculates and displays the total sum of expenses recorded by the user.
-  - **Justification:** Provides a critical functionality to allow users to monitor and limit their expenses within a predefined budget.
 - Display Total Expenses [PR #41](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/41)
-  - **What it does:** Enables users to set a total budget for their financial tracking. The budget is validated and formatted to ensure accuracy.
-  - **Justification:** Provides users with an essential overview of their spending habits, enabling better financial tracking and decision-making.
 
 ### Enhancements to Existing Features
 - Shortened some command inputs (e.g., from `addExpense` to `addExp`) for optimization. [PR #64](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/64) [PR #66](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/66)
