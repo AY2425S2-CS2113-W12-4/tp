@@ -17,6 +17,7 @@ of rchlai, Hansel-K, EdwinTun98, and limleyhooi.
 ## Design <a name="2-design"></a>
 
 > [!TIP]
+> 
 > The `.puml` files used to create diagrams in this document `docs/diagrams` folder.
 
 > [!NOTE]
@@ -29,7 +30,7 @@ of rchlai, Hansel-K, EdwinTun98, and limleyhooi.
 > Some diagrams have optional elements (e.g, activation bars, return arrows) omitted since their omission
 > does not result in ambiguities or loss of relevant information.
 
->[!NOTES]
+> [!NOTES]
 > 
 > All <amount> inputs will be formatted to 2 d.p.
 > 
@@ -162,6 +163,7 @@ This UML sequence diagram demonstrates a typical command flow:
 Here is the UML class diagram of `Parser.java`:
 
 > [!NOTE]
+> 
 > This class diagram only concerns parsing the command that adds expense entries.
 
 ![Image](diagrams/Parser_ClassDiagram.png)
@@ -559,7 +561,8 @@ Implementation: Implements the Command interface and delegates logic to MoneyLis
 
 ![Image](diagrams/List.png)
 
->[!NOTE]
+> [!NOTE]
+> 
 > To reduce clutter, optional elements (e.g, activation bars, return arrows) are omitted in this diagram.
 
 **Why this design**:
@@ -614,7 +617,8 @@ The `EditExpenseCommand` updates the details of an existing expense entry, such 
 
 ![Image](diagrams/EditExpenses.png)
 
->[!NOTE]
+> [!NOTE]
+> 
 > To reduce clutter, optional elements (e.g, activation bars, return arrows) are omitted in this diagram.
 
 **Why this design**:
@@ -668,7 +672,8 @@ The `FindCommand` searches for entries in the MoneyList that contain a specific 
 
 ![Image](diagrams/FindCommand.png)
 
->[!NOTE]
+> [!NOTE]
+> 
 > To reduce clutter, optional elements (e.g, activation bars, return arrows) are omitted in this diagram.
 
 **Why this design**:
@@ -1004,7 +1009,7 @@ Tertiary students who:
 
 ### Value proposition
 
-"Track expenses, manage budgets, and control 
+"Track expenses/income, manage budgets, and control 
 spending—all in one simple CLI app for personal 
 finance mastery."
 

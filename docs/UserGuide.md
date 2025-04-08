@@ -18,7 +18,7 @@ Here are the steps to get started quickly:
 
 ## Features
 
-> [NOTES]
+> [!NOTES]
 > 
 > Useful information about the command format:
 > - Words in `UPPER_CASE` are the parameters to be supplied by the user.
@@ -81,6 +81,7 @@ Format: `help`
 Outcome:
 
 > [!NOTE]
+> 
 > The code snippet below is formatted to ensure that the command 
 > descriptions do not get "cut off" across the screen and omit crucial 
 > details. 
@@ -177,7 +178,8 @@ Adds an income entry to the list.
 
 Format: `addIncome DESCRIPTION $/<amount> d/DATE`
 
-> ![NOTE]
+> [!NOTE]
+> 
 > DATE parameter is optional.
 
 Example: `addIncome salary $/2000`
@@ -258,6 +260,7 @@ Options:
 - `d/DATE`: Updates the entry's date.
 
 > [!NOTE]
+> 
 > Useful information about the command format:
 > - Parameters need not be in a **specific order**.
     e.g. if the command specifies `$/<amount> c/CATEGORY`, `c/CATEGORY $/<amount>` is acceptable.
@@ -335,6 +338,7 @@ Categories (in order of appearance):
 Displays overall expense or expense for a specified category
 
 > [!NOTE]
+> 
 > Overall budget refers to total budget
 
 Format: `check Overall / check CATEGORY`
@@ -363,23 +367,6 @@ check Overall
 Overall Budget: $400.00
 Overall Expenses: $250.00
 Remaining: $150.00
--------------------------------------------------------------------------------
-What do you want to do next?
-```
-
-### Clearing all entries: `clear`
-
-Clear all entries stored in money list.
-
-Format: `clear`
-
-Example: `clear`
-
-Outcome:
-```
-What do you want to do next?
-setCatBgt c/food 100
-Budget for category 'food' set to $100.00
 -------------------------------------------------------------------------------
 What do you want to do next?
 ```
