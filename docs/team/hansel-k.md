@@ -11,7 +11,6 @@ Given below are my contributions to the project.
 
 - **Code contributed**: [RepoSense Link](https://nus-cs2113-ay2425s2.github.io/tp-dashboard/?search=hansel-k&breakdown=true&sort=groupTitle%20dsc&sortWithin=title&since=2025-02-21&timeframe=commit&mergegroup=&groupSelect=groupByRepos&checkedFileTypes=test-code~other~functional-code~docs)
 
----
 ### Implementations:
 #### New Feature: Add Expense Entry [PR #46](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/46)
 - **What it does**: Enables users to add new expense entries by specifying details like description, amount, category, and date.
@@ -20,7 +19,6 @@ Given below are my contributions to the project.
   - Designed a flexible input format allowing optional fields (e.g., category and date).
   - Implemented validation mechanisms to ensure input correctness, prevent invalid markers, and handle edge cases like non-numeric amounts or negative values.
   - Enhanced usability with default values for optional fields (e.g., "Uncategorized" for category and "no date" for date).
-- **Credits:** Utilized Java's standard libraries for string manipulation and error handling. Developed a comprehensive validation pipeline to parse and save expense data.
 
 #### New Feature: Display All Unique Expense Categories [PR #50](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/50)
 - **What it does:** Extracts and displays all unique categories from the expense entries recorded by the user.
@@ -45,12 +43,6 @@ Given below are my contributions to the project.
 - Performed and added JUnit tests on `addExpense` and other methods [PR #53](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/53) [PR #59](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/59) [PR #164](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/164)
 - Applied the SLAP concept on the `addExpense` and `listCats` methods. [PR #88](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/88)
 
-### Issues and Bug Fixes
-- Manually tested for bugs before Practical Examination dry run and rectified them or raised the issue to team members. [PR #56](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/56) [PR #66](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/66) [PR #92](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/92)
-- Resolved Parser input bugs, Double formatting bugs across multiple methods, and `addExp` date formatting bugs after Practical Examination dry run. [PR #164](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/164) [PR #166](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/166) [PR #171](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/171)
-
----
-
 ### Documentation
 #### User Guide:
 - Focused on adding and updating `addExp`, `totalExp` and `del` commands, and the Command Cheat Sheet. [PR #54](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/54) [PR #64](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/64) [PR #79](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/79) 
@@ -60,11 +52,9 @@ Given below are my contributions to the project.
 - Provided UML diagrams illustrating the workflow of the `help` and `exit` commands. [PR #79](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/79)
 - Filled in the User Stories, Non-Functional Requirements, Glossary, and Instructions for Manual Testing sections. [PR #79](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/79)
 
----
-
 ### Project Management and Team-Based Contributions
 - Assigned and coordinated feature development.
 - Shared insights and suggestions with team members to enhance the project (e.g. shortening user inputs for better UX).
-- Reviewed numerous issues from Practical Exam dry run and delegated them to team members best suited to resolve them.
+- Reviewed numerous issues from Practical Exam dry run and either handled them personally or delegated them to team members best suited to resolve them. [PR #164](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/164) [PR #166](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/166) [PR #171](https://github.com/AY2425S2-CS2113-W12-4/tp/pull/171)
 
 
